@@ -26,6 +26,13 @@ public static class GameDataMasterBuilder
             return;
         }
 
+        // フォルダがない場合はフォルダを生成.
+        if (!Directory.Exists(EditorDefs.ScriptGenerated))
+            Directory.CreateDirectory(EditorDefs.ScriptGenerated);
+        if (!Directory.Exists(EditorDefs.GameDataBinary))
+            Directory.CreateDirectory(EditorDefs.GameDataBinary);
+
+
         BuildEnumCache();   // ここで型キャッシュ構築
 
         var files = Directory.GetFiles(EditorDefs.GameDataMaster, "*.csv", SearchOption.AllDirectories);

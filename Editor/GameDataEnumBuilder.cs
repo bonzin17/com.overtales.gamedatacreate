@@ -16,6 +16,10 @@ public static class GameDataEnumBuilder
 
         var files = Directory.GetFiles(EditorDefs.GameDataEnum, "*.csv", SearchOption.AllDirectories);
 
+        // フォルダがない場合はフォルダを生成.
+        if (!Directory.Exists(EditorDefs.ScriptGenerated))
+            Directory.CreateDirectory(EditorDefs.ScriptGenerated);
+
         foreach (var file in files)
         {
             GenerateEnum(file);
