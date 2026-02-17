@@ -1,0 +1,10 @@
+{
+  "name": "GameDataCreateSystem.Runtime",
+  "rootNamespace": "GameDataCreateSystem",
+  "references": [],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "autoReferenced": true
+}

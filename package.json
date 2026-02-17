@@ -1,0 +1,10 @@
+{
+  "name": "com.overtales.gamedatacreate",
+  "version": "1.0.0",
+  "displayName": "GameDataCreateSystem",
+  "description": "GameMasterData & Enum create from google spread sheets. And runtime loading system",
+  "unity": "2022.3",
+  "author": {
+    "name": "K.Uemoto"
+  }
+}

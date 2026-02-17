@@ -1,0 +1,14 @@
+{
+  "name": "GameDataSystem.Editor",
+  "rootNamespace": "GameDataCreateSystem.Editor",
+  "references": [
+    "GameDataCreateSystem.Runtime"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "autoReferenced": true
+}
