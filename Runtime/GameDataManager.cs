@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using UnityEngine;
 
@@ -123,11 +124,13 @@ public class GameDataManager
     // =====================================
     private Type GetGameDataType(string className)
     {
-        return Type.GetType($"GameData.{className}");
+        Type type = AppDomain.CurrentDomain.GetAssemblies().Select(a => a.GetType($"GameData.{className}")).FirstOrDefault(t => t != null);
+        return type;
     }
 
     private Type GetBinaryType(string className)
     {
-        return Type.GetType($"GameData.{className}Binary");
+        Type type = AppDomain.CurrentDomain.GetAssemblies().Select(a => a.GetType($"GameData.{className}Binary")).FirstOrDefault(t => t != null);
+        return type;
     }
 }
